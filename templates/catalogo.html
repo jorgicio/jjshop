@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Cat&aacute;logo de productos</title>
+        <meta charset="utf-8">
+	</head>
+	<body>
+		<div class = "catalogo">
+			<h2>A continuaci&oacute;n, les tenemos la siguiente lista de productos:</h2>
+			<div class="productos">
+			{% for cat in Catalogo %}
+				<h3>{{ cat.Nombre }}</h3> ({{ cat.Codigo }})<br>
+				<img src="{{ cat.Img }}" /><br>
+				<h3>Descripci&oacute;n</h3>: 
+				{{ cat.Descripcion }}
+				<h3>Plataforma:</h3> {{ cat.Plataforma }}
+				<h3>Valor: $ {{ cat.Precio }}</h3>
+			{% endfor %}
+			</div>
+		<div>
+		<div class="footer">
+			<p>JJShop Enterprise, ltda. 2012-?</p>
+		</div>
+	</body>
+</html>
